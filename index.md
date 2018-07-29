@@ -1,3 +1,4 @@
 # Miller Hall
 
-This is my github homepage
+## Projects
+- [etch_a_sketch](etch_a_sketch/index.html)
