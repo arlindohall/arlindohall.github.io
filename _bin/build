@@ -1,0 +1,12 @@
+#/usr/bin/env bash
+
+DIR=$(pwd)
+
+cd _src
+
+for f in $(find . -name '*.md') ; do
+    pandoc $f -o ../"$(basename "$f" .md).html"
+done
+
+
+cd $DIR
