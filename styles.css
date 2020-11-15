@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "CMU Serif";
+    src: url("assets/cmunrm.ttf");
+}
+
+@font-face {
+    font-family: "CMU Sans";
+    src: url("assets/cmunbmr.ttf")
+}
+
+* {
+    font-family: "CMU Serif";
+    --navy: #137;
+    --cream: #fffbe3;
+    --gold: rgb(218, 193, 54);
+
+    --side-gutter-width: 20%;
+    --body-max-width: 80em;
+
+    background-color: white;
+    color: var(--navy);
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    /* border-radius: 2px;
+    border: 1px solid var(--navy); */
+    margin: 10px var(--side-gutter-width) 40px var(--side-gutter-width);
+    max-width: var(--body-max-width);
+    padding: 5px 20px;
+}
+
+.header {
+    margin-left: var(--side-gutter-width);
+    margin-right: var(--side-gutter-width);
+    margin-top: 20px;
+    max-width: var(--body-max-width);
+}
+
+.footer {
+    text-align: center;
+}
+
+.header-button > * {
+    border: 1px solid var(--navy);
+    border-radius: 2px;
+    font-family: "CMU Sans";
+    padding: 1px 8px;
+}
+
+.header-button-space {
+    margin-left: 0.8em;
+}
+
+.button-float-right {
+    float: right;
+}
