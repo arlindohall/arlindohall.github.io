@@ -12,21 +12,33 @@ function registerComponent(id, self) {
     );
 }
 
+let markdown = {
+    async fetchMarkdown(path) {
+        let content;
+        content = await fetch(path);
+        if (content.ok) {
+            content = await content.text();
+        } else {
+            content = await require('/content/no-such-page.md');
+        }
+        content = this.parser.parse(content);
+        content = this.renderer.render(content);
+        return content;
+    },
+    parser: new commonmark.Parser(),
+    renderer: new commonmark.HtmlRenderer(),
+};
 
 class MarkdownContent {
     constructor(id, path) {
         this.id = id;
         this.path = path;
-        this.parser = new commonmark.Parser();
-        this.renderer = new commonmark.HtmlRenderer();
 
         registerComponent(id, this);
     }
 
     async render() {
-        this.content = await require(this.path);
-        this.content = this.parser.parse(this.content);
-        this.content = this.renderer.render(this.content);
+        this.content = await markdown.fetchMarkdown(this.path);
 
         this.el = document.getElementById(this.id);
         this.el.innerHTML = this.content;

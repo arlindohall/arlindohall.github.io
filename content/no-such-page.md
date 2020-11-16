@@ -1,4 +1,4 @@
-## There's no post here!
+## There's no page here!
 
 My site works by parsing all my posts client-side, and this
 page just fetches the content to show. You may want to go
