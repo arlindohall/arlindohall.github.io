@@ -1,13 +1,27 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles.css"/>
+        <script src="/assets/commonmark.min.js"></script>
     </head>
     <body>
-        <div class="header"></div>
-        <div class="main">
-            <h1>Posts</h1>
+        <div class="container">
+            <div class="header"></div>
+            <div id="main" class="main"></div>
+            <div class="footer"></div>
         </div>
-        <div class="footer"></div>
     </body>
     <script src="base.js"></script>
+    <script>
+        let params = new URLSearchParams(location.search);
+        let path;
+        if (params.has('id')) {
+            path = params.get('id');
+        } else {
+            path = 'posts';
+        }
+
+        let md = new MarkdownContent('main', `/content/${path}.md`);
+        // TODO: When a page does not exist, show the below instead...
+        // let md = new MarkdownContent('main', '/content/no-such-post.md');
+    </script>
 </html>

@@ -1,6 +1,0 @@
-{
-    "buttons": [
-        { "text": "Home", "link": "./index.html" },
-        { "text": "Posts", "link": "./posts.html"}
-    ]
-}

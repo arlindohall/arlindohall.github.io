@@ -21,14 +21,14 @@
     color: var(--navy);
 }
 
-a {
+.header-button > a {
     text-decoration: none;
 }
 
 .main {
-    /* border-radius: 2px;
-    border: 1px solid var(--navy); */
-    margin: 10px var(--side-gutter-width) 40px var(--side-gutter-width);
+    border-radius: 2px;
+    border: 1px solid var(--navy);
+    margin: 30px var(--side-gutter-width) 40px var(--side-gutter-width);
     max-width: var(--body-max-width);
     padding: 5px 20px;
 }
@@ -55,6 +55,6 @@ a {
     margin-left: 0.8em;
 }
 
-.button-float-right {
+.header-button-float-right {
     float: right;
 }
