@@ -56,6 +56,8 @@ async function footer() {
     let sharedFooter = await require('/shared-footer.html');
     let el = document.querySelector('.footer');
     el.innerHTML = sharedFooter;
+    document.getElementById('footer-source-link')
+        .href = `https://github.com/arlindohall/arlindohall.github.io/blob/mainline${document.location.pathname}`;
 }
 
 

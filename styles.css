@@ -16,15 +16,23 @@
 * {
     font-family: "CMU Serif";
     --navy: #137;
+    --navy2: #026;
+    --navy3: #015;
     --cream: #fffbe3;
     --grey: #333;
     --gold: rgb(218, 193, 54);
 
     --side-gutter-width: 20%;
     --body-max-width: 80em;
+    --footer-height: 120px;
+    --header-height: 5%;
 
     background-color: white;
     color: var(--navy);
+}
+
+body {
+    margin: 0;
 }
 
 p, li, em {
@@ -50,12 +58,14 @@ img {
 .main {
     border-radius: 2px;
     border: 1px solid var(--navy);
+    min-height: calc(100% - var(--footer-height) - var(--header-height));
     margin: 30px var(--side-gutter-width) 40px var(--side-gutter-width);
     max-width: var(--body-max-width);
     padding: 5px 20px;
 }
 
 .header {
+    min-height: var(--header-height);
     margin-left: var(--side-gutter-width);
     margin-right: var(--side-gutter-width);
     margin-top: 20px;
@@ -73,7 +83,6 @@ img {
     text-decoration: none;
 }
 
-
 .header-button-space {
     margin-left: 0.8em;
 }
@@ -83,5 +92,17 @@ img {
 }
 
 .footer {
+    background: linear-gradient(
+        30deg,
+        var(--navy) 0%,
+        var(--navy2) 20%,
+        var(--navy3) 100%);
+    height: var(--footer-height);
+    padding-top: 20px;
     text-align: center;
+}
+
+.footer * {
+    background: rgb(0, 0, 0, 0);
+    color: white;
 }
