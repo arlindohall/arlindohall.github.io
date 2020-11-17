@@ -1,17 +1,23 @@
 @font-face {
     font-family: "CMU Serif";
-    src: url("assets/cmunrm.ttf");
+    src: url("/assets/fonts/cmunrm.ttf");
 }
 
 @font-face {
     font-family: "CMU Sans";
-    src: url("assets/cmunbmr.ttf")
+    src: url("/assets/fonts/cmunbmr.ttf")
+}
+
+@font-face {
+    font-family: "CMU Mono";
+    src: url("/assets/fonts/cmuntt.ttf")
 }
 
 * {
     font-family: "CMU Serif";
     --navy: #137;
     --cream: #fffbe3;
+    --grey: #333;
     --gold: rgb(218, 193, 54);
 
     --side-gutter-width: 20%;
@@ -21,8 +27,24 @@
     color: var(--navy);
 }
 
-.header-button > a {
-    text-decoration: none;
+p, li, em {
+    color: var(--grey);
+}
+
+pre, code {
+    font-family: "CMU Mono";
+}
+
+img {
+    left: 15%;
+    position: relative;
+    width: 70%;
+}
+
+.index-personal-logo {
+    left: calc(50% - 40px);
+    position: relative;
+    width: 80;
 }
 
 .main {
@@ -40,10 +62,6 @@
     max-width: var(--body-max-width);
 }
 
-.footer {
-    text-align: center;
-}
-
 .header-button > * {
     border: 1px solid var(--navy);
     border-radius: 2px;
@@ -51,10 +69,19 @@
     padding: 1px 8px;
 }
 
+.header-button > a {
+    text-decoration: none;
+}
+
+
 .header-button-space {
     margin-left: 0.8em;
 }
 
 .header-button-float-right {
     float: right;
+}
+
+.footer {
+    text-align: center;
 }
