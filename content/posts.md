@@ -1,4 +1,5 @@
 # Posts
 
-- [How and why I built this website](/posts.html?id=website)
-<!-- - [How I run meetings](/posts.html?id=running-meetings) -->
+- [How and why I built this website…](?id=website)
+- [Todo lists and my own version of getting things done](?id=todo-lists)
+- [How I run meetings](?id=running-meetings)
