@@ -21,7 +21,7 @@ have for me are:
 
 > Why did you use GitHub pages for your personal site?
 
-Well, basically because it's really easy and basically free to set up a
+Well, basically because it's really easy and completely free to set up a
 website with GitHub pages. I don't want to invest much time or energy
 into this when I'm not really committed to making something interesting
 out of it. It's just a place to host stuff online.
@@ -33,3 +33,8 @@ bit more control over the site and how it looked, and the ability to add
 some dynamic functionality in the future if I decide to. Also, I didn't
 want to learn a whole new tool (Jekyll themes) in order to be able to
 have a website that was really customized.
+
+Also, the way I've written this site to be all static HTML and JS/CSS,
+it will be really easy to move off Jekyll if I ever need to. The deploy
+could be as easy as `rsync` to a VPS running `nginx` if it had to be.
+The easy way to do something is always better than not doing it at all.
