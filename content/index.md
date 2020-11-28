@@ -1,10 +1,10 @@
 # Miller Hall
 
 - I am a software developer and tinkerer based in Herndon, Virginia
-- Software is my job and my hobby, but I don't really have any projects I've shared
+- Software is my job and my hobby, but I don't really have any projects I've shared (I'm working on that)
 - On the weekends I like to read (check out my [goodreads](https://www.goodreads.com/user/show/52490059-miller-hall)) and take walks with my wife and my dog
 - I'm originally from North Carolina, and I graduated from Clemson in 2016. I love all things Carolinas
-- I'm not super talented. My greatest skill is self-deprecating humor
+- I'm not super talented—my greatest skill is self-deprecating humor
 
 ## Work
 

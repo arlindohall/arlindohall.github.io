@@ -1,5 +1,7 @@
 # Why documentation is important
 
+*(Work in Progress)*
+
 Why Documentation is the most important skill you can have as a developer.
 
 ## Why is documentation important on its own?
