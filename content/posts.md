@@ -11,6 +11,7 @@ more comfortable with the learn in public style.
 
 ## Post List
 
+- [Why documentation is the most important skill you can have as a developer](?id=documentation)
 - [How and why I built this website…](?id=website)
 - [Todo lists and my own version of getting things done](?id=todo-lists)
 - [How I run meetings](?id=running-meetings)
