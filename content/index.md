@@ -14,8 +14,7 @@
 
 ## Projects
 
-I've given up on most of these, as I prefer the peak of the dunning-kruger effect
-to the valleys.
+I've given up on most of these, as I prefer the peak of the dunning-kruger effect to the valleys.
 
 <a href="https://commons.wikimedia.org/wiki/File:Dunning%E2%80%93Kruger_effect.jpg">
      <img src="/assets/dunning-kruger.jpg"

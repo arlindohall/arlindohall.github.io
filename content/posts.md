@@ -1,13 +1,9 @@
 # Posts
 
-This is a manually-updated list of posts I've written. Right
-now, they're all marked as "Work in Progress" because I don't
-feel like they're ready to see the light of day/to be shared.
-However, I'm trying to learn in public, so I think it's more
-important to put them somewhere than to have them in perfect
-shape. Putting the "Work in Progress" message at the top is
-my way of forgiving myself for their imperfections until I'm
-more comfortable with the learn in public style.
+This is a manually-updated list of posts I've written.
+Right now, they're all marked as "Work in Progress" because I don't feel like they're ready to see the light of day/to be shared.
+However, I'm trying to learn in public, so I think it's more important to put them somewhere than to have them in perfect shape.
+Putting the "Work in Progress" message at the top is my way of forgiving myself for their imperfections until I'm more comfortable with the learn in public style.
 
 ## Post List
 
