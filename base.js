@@ -21,12 +21,12 @@ let markdown = {
         } else {
             content = await require('/content/no-such-page.md');
         }
-        content = this.parser.parse(content);
-        content = this.renderer.render(content);
+        content = this.parser.render(content);
         return content;
     },
-    parser: new commonmark.Parser(),
-    renderer: new commonmark.HtmlRenderer(),
+    parser: markdownit({
+        html: true,
+    }).use(markdownitFootnote),
 };
 
 class MarkdownContent {

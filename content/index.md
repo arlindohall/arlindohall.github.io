@@ -16,16 +16,17 @@
 
 I've given up on most of these, as I prefer the peak of the dunning-kruger effect to the valleys.
 
-<a href="https://commons.wikimedia.org/wiki/File:Dunning%E2%80%93Kruger_effect.jpg">
-     <img src="/assets/dunning-kruger.jpg"
-          title="LittleT889, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons"
-          alt="Dunning-kruger effect graph, from wikimedia commons">
-     </img>
-</a>
+<img class="image-center"
+     src="/assets/dunning-kruger.jpg"
+     title="LittleT889, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons"
+     alt="Dunning-kruger effect graph, from wikimedia commons">
+</img>
 
-- Working through the book [Crafting Interpreters](https://craftinginterpreters.com) in Rust
-- [This website](/posts.html?id=website) for hosting updates and various static content
-- Advent of code in lua, one of my favorite programming languages
-- Working through the exercises of _SICP_
+| Project | Description  | Link    |
+| :--     | :--          | :--     |
+| `rlox` | Work through the book [Crafting Interpreters](https://craftinginterpreters.com) in Rust | [GitHub](https://github.com/arlindohall/rlox)
+| This website | Host updates and various static content | [Post](/posts.html?id=website)
+| `advent.lua` | Advent of code in lua, one of my favorite programming languages | [GitHub](https://github.com/arlindohall/advent.lua)
+| `sicp` | Work through the exercises of _SICP_ | [GitHub](https://github.com/arlindohall/sicp)
 
 <img class="index-personal-logo" src="/assets/logo.svg"></img>
