@@ -26,7 +26,11 @@ let markdown = {
     },
     parser: markdownit({
         html: true,
-    }).use(markdownitFootnote),
+    }).use(markdownitFootnote)
+      .use(markdownItAnchor, {
+          permalink: true,
+          permalinkSymbol: '#',
+      }),
 };
 
 class MarkdownContent {

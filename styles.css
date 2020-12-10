@@ -15,11 +15,14 @@
 
 * {
     font-family: "CMU Serif";
-    --navy: #137;
+    --navy1: #137;
     --navy2: #026;
     --navy3: #015;
     --cream: #fffbe3;
-    --grey: #333;
+    --grey1: #333;
+    --grey2: #333;
+    --grey3: #666;
+    --grey4: #bbb;
     --gold: rgb(218, 193, 54);
 
     --side-gutter-width: 20%;
@@ -29,12 +32,12 @@
 
     --navy-gradient: linear-gradient(
         30deg,
-        var(--navy) 0%,
+        var(--navy1) 0%,
         var(--navy2) 20%,
         var(--navy3) 100%);
 
     background-color: white;
-    color: var(--navy);
+    color: var(--navy1);
 }
 
 body {
@@ -42,7 +45,7 @@ body {
 }
 
 p, li, em, td {
-    color: var(--grey);
+    color: var(--grey1);
 }
 
 pre, code {
@@ -60,8 +63,14 @@ td, th {
 }
 
 td, th {
-    border: 1px solid var(--grey);
+    border: 1px solid var(--grey1);
     word-wrap: break-word;
+}
+
+.header-anchor {
+    text-decoration: none;
+    color: var(--grey4);
+    font-family: CMU Mono;
 }
 
 .index-personal-logo {
@@ -72,7 +81,7 @@ td, th {
 
 .main {
     border-radius: 2px;
-    border: 1px solid var(--navy);
+    border: 1px solid var(--navy1);
     min-height: calc(100% - var(--footer-height) - var(--header-height));
     margin: 30px var(--side-gutter-width) 40px var(--side-gutter-width);
     max-width: var(--body-max-width);
@@ -87,7 +96,7 @@ td, th {
 }
 
 .header-button > * {
-    /* border: 1px solid var(--navy);
+    /* border: 1px solid var(--navy1);
     border-radius: 2px; */
     /* font-family: "CMU Sans"; */
     padding: 1px 8px;
