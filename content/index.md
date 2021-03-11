@@ -26,7 +26,6 @@ I've given up on most of these, as I prefer the peak of the dunning-kruger effec
 | :--     | :--          | :--     |
 | `rlox` | Work through the book [Crafting Interpreters](https://craftinginterpreters.com) in Rust | [GitHub](https://github.com/arlindohall/rlox)
 | This website | Host updates and various static content | [Post](/posts.html?id=website)
-| `advent.lua` | Advent of code in lua, one of my favorite programming languages | [GitHub](https://github.com/arlindohall/advent.lua)
 | `sicp` | Work through the exercises of _SICP_ | [GitHub](https://github.com/arlindohall/sicp)
 
 <img class="index-personal-logo" src="/assets/logo.svg"></img>

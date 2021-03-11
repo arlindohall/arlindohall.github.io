@@ -7,7 +7,5 @@ Putting the "Work in Progress" message at the top is my way of forgiving myself 
 
 ## Post List
 
-- [Why documentation is the most important skill you can have as a developer](?id=documentation)
+- [Generating random data in fish(/bash/sh/zsh)](?id=random-strings-in-bash)
 - [How and why I built this website…](?id=website)
-- [Todo lists and my own version of getting things done](?id=todo-lists)
-- [How I run meetings](?id=running-meetings)
