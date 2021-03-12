@@ -92,10 +92,6 @@ td, th {
     text-decoration: none;
 }
 
-.header-button * {
-    font-size: large;
-}
-
 .header-button-space {
     margin-left: 0.8em;
 }
