@@ -1,20 +1,6 @@
-@font-face {
-    font-family: "CMU Serif";
-    src: url("/assets/fonts/cmunrm.ttf");
-}
-
-@font-face {
-    font-family: "CMU Sans";
-    src: url("/assets/fonts/cmunbmr.ttf")
-}
-
-@font-face {
-    font-family: "CMU Mono";
-    src: url("/assets/fonts/cmuntt.ttf")
-}
 
 * {
-    font-family: "CMU Serif";
+    font-family: serif;
     --navy1: #137;
     --navy2: #026;
     --navy3: #015;
@@ -49,7 +35,7 @@ p, li, em, td {
 }
 
 pre, code {
-    font-family: "CMU Mono";
+    font-family: monospace;
 }
 
 td, th {
@@ -70,7 +56,7 @@ td, th {
 .header-anchor {
     text-decoration: none;
     color: var(--grey4);
-    font-family: CMU Mono;
+    font-family: monospace;
 }
 
 .index-personal-logo {
@@ -96,9 +82,9 @@ td, th {
 }
 
 .header-button > * {
-    /* border: 1px solid var(--navy1);
-    border-radius: 2px; */
-    /* font-family: "CMU Sans"; */
+    border: 1px solid var(--navy1);
+    border-radius: 2px;
+    font-family: sans-serif;
     padding: 1px 8px;
 }
 
