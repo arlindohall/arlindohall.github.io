@@ -14,16 +14,4 @@
             <div class="footer"></div>
         </div>
     </body>
-    <script src="base.js"></script>
-    <script>
-        let params = new URLSearchParams(location.search);
-        let path;
-        if (params.has('id')) {
-            path = params.get('id');
-        } else {
-            path = 'posts';
-        }
-
-        let md = new MarkdownContent('main', `/content/${path}.md`);
-    </script>
 </html>
