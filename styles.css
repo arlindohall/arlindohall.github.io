@@ -11,8 +11,8 @@
     --grey4: #bbb;
     --gold: rgb(218, 193, 54);
 
-    --side-gutter-width: 20%;
-    --body-max-width: 80em;
+    --body-width: clamp(20ch, 60%, 80ch);
+    --side-gutter-width: calc((100% - var(--body-width)) / 2);
     --footer-height: 120px;
     --header-height: 5%;
 
@@ -70,15 +70,15 @@ td, th {
     border: 1px solid var(--navy1);
     min-height: calc(100% - var(--footer-height) - var(--header-height));
     margin: 30px var(--side-gutter-width) 40px var(--side-gutter-width);
-    max-width: var(--body-max-width);
     padding: 5px 20px;
+    width: var(--body-width);
 }
 
 .header {
     background: var(--navy-gradient);
     min-height: var(--header-height);
     padding: 20px var(--side-gutter-width) 10px var(--side-gutter-width);
-    max-width: var(--body-max-width);
+    width: var(--body-width);
 }
 
 .header-button > * {
@@ -105,6 +105,7 @@ td, th {
     height: var(--footer-height);
     padding-top: 20px;
     text-align: center;
+    width: 100%;
 }
 
 .footer * {
