@@ -37,8 +37,8 @@
 # 0000010</code></pre>
         <p>Uh, oh. That’s not what we wanted. Hexdump is really cool for digging through files because by default, it prints out each byte with padding and prefixes each group of 16 bytes with a byte counter, which makes it easy to track where you are in a file. But we want something much simpler, just the hex-encoded string version of some binary data.</p>
         <p>I have two aliases I put in my <code>config.fish</code> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</p>
-        <pre class="fish"><code>alias hd-rows &quot;hexdump -e &#39;16/1 \&quot;%02x\&quot; \&quot;\n\&quot;&#39;&quot;
-        alias hd &quot;hexdump -e &#39;\&quot;%02x\&quot;&#39;&quot;</code></pre>
+<pre class="fish"><code>alias hd-rows &quot;hexdump -e &#39;16/1 \&quot;%02x\&quot; \&quot;\n\&quot;&#39;&quot;
+alias hd &quot;hexdump -e &#39;\&quot;%02x\&quot;&#39;&quot;</code></pre>
         <p>Okay so if you use those aliases, you can do…</p>
 <pre><code>head -c 4 /dev/random | hd
 # 7933b80d</code></pre>
