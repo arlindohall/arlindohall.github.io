@@ -38,19 +38,10 @@ pre, code {
     font-family: monospace;
 }
 
-td, th {
-    padding: 2px 10px;
-}
-
 .image-center {
     left: 15%;
     position: relative;
     width: 70%;
-}
-
-td, th {
-    border: 1px solid var(--grey1);
-    word-wrap: break-word;
 }
 
 .header-anchor {
