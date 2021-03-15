@@ -1,10 +1,17 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" href="/styles.css"></link>
-  <link rel="icon" type="image/svg" href="/assets/logo.svg"></link>
-  <title>Miller Hall</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+  <head>
+    <meta charset="utf-8"></meta>
+    <link rel="stylesheet" href="/styles.css"></link>
+    <link rel="icon" type="image/svg" href="/assets/logo.svg"></link>
+    $if(title)$
+    <title>$title$</title>
+    $else$
+    <title>Miller Arlindo Hall</title>
+    $endif$
+    <meta name="author" content="Miller Arlindo Hall (hall@hey.com)"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+  </head>
   <body>
     <div class="container">
       <div class="header">
@@ -18,20 +25,25 @@
       </div>
 
       <div id="main" class="main">
-      <div class="main-buffer">
-      </div>
+        <div class="main-buffer">
+<!--
+  Indentation is messed up here because pandoc indents code blocks
+  if they are indented with the content.
+-->
+$body$
+        </div>
       </div>
 
       <img class="index-personal-logo"
-           title="Personal logo"
-           alt="Personal website logo, a monogram of MAH, my initials"
-           src="/assets/logo.svg">
+          title="Personal logo"
+          alt="Personal website logo, a monogram of MAH, my initials"
+          src="/assets/logo.svg">
       </img>
 
       <div class="footer">
-      <span>Page source on <a href="https://github.com/arlindohall/arlindohall.github.io/blob/mainline/{page_path}">GitHub</a></span>
+        <span>Page source on <a href="https://github.com/arlindohall/arlindohall.github.io/blob/mainline/$outputfile$">GitHub</a></span>
       </div>
     </div>
   </body>
-<!-- <link rel="stylesheet" href="/debug.css"></link> -->
+  <!-- <link rel="stylesheet" href="/debug.css"></link> -->
 </html>
