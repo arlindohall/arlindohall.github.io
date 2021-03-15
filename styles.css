@@ -59,7 +59,7 @@ pre, code {
 .main {
     border-radius: 2px;
     border: 1px solid var(--navy1);
-    min-height: calc(100% - var(--footer-height) - var(--header-height));
+    min-height: 80ch;
     margin: 30px var(--side-gutter-width) 40px var(--side-gutter-width);
     width: var(--body-width);
 }
