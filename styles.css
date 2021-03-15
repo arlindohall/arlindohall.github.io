@@ -64,22 +64,26 @@ pre, code {
     width: var(--body-width);
 }
 
-.main-padding {
+.main-buffer {
     margin: 5px 20px 60px 20px;
 }
 
 .header {
     background: var(--navy-gradient);
     min-height: var(--header-height);
+    /* Use padding for background gradient extension */
     padding: 20px var(--side-gutter-width) 10px var(--side-gutter-width);
     width: var(--body-width);
 }
 
-.header-button > * {
+.header-button {
     border: 1px solid var(--navy1);
     border-radius: 2px;
+}
+
+.header-button > * {
     font-family: sans-serif;
-    padding: 1px 8px;
+    margin: 1px 8px 2px 8px;
 }
 
 .header-button > a {
@@ -97,6 +101,7 @@ pre, code {
 .footer {
     background: var(--navy-gradient);
     height: var(--footer-height);
+    /* Use padding for background gradient extension */
     padding-top: 20px;
     text-align: center;
     width: 100%;
