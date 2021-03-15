@@ -19,6 +19,14 @@ for f in $(ls _posts) ; do
             -o posts/$(basename $f .md).html
 done
 
+for f in $(ls _root) ; do
+    pandoc _root/$f \
+            --template _template.html \
+            --from markdown+footnotes \
+            --to html+auto_identifiers \
+            -o $(basename $f .md).html
+done
+
 if [ $MOVED ] ; then
     cd -
 fi
