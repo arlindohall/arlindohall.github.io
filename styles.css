@@ -11,7 +11,7 @@
     --grey4: #bbb;
     --gold: rgb(218, 193, 54);
 
-    --body-width: clamp(20ch, 60%, 80ch);
+    --body-width: clamp(20ch, 80%, 80ch);
     --side-gutter-width: calc((100% - var(--body-width)) / 2);
     --footer-height: 120px;
     --header-height: 5%;
@@ -70,8 +70,11 @@ td, th {
     border: 1px solid var(--navy1);
     min-height: calc(100% - var(--footer-height) - var(--header-height));
     margin: 30px var(--side-gutter-width) 40px var(--side-gutter-width);
-    padding: 5px 20px;
     width: var(--body-width);
+}
+
+.main-padding {
+    margin: 5px 20px;
 }
 
 .header {

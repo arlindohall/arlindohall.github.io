@@ -17,6 +17,7 @@
       </div>
 
       <div id="main" class="main">
+      <div class="main-padding">
         <h1 id="random-strings-in-bash">Random Strings in Bash</h1>
         <p>On Linux (and MacOS) systems, there’s a really nifty feature that you can use to get random data: <code>/dev/random</code> (or, if you’re in a hurry you can use <code>/dev/urandom</code>). This special file contains random bytes, which is useful for creating one-off keys or other temporary random data. Sometimes, though, you need structured random data or encoded data. For example, you might need a random hex string like a uuid (but not a uuid because then you can just use <code>uuid</code>).</p>
         <p>If you just need a bunch of random data, then getting it is as simple as the following:</p>
@@ -51,6 +52,7 @@ alias hd &quot;hexdump -e &#39;\&quot;%02x\&quot;&#39;&quot;</code></pre>
         <li id="fn1" role="doc-endnote"><p>If you use bash, you can use the same alias, just replace the space after <code>alias</code> with an equal sign.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
         </ol>
         </section>
+      </div>
       </div>
 
       <img class="index-personal-logo"
