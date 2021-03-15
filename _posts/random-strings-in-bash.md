@@ -55,7 +55,7 @@ But we want something much simpler, just the hex-encoded string version of some 
 
 I have two aliases I put in my `config.fish` [^1]:
 
-``` {.fish}
+```fish
 alias hd-rows "hexdump -e '16/1 \"%02x\" \"\n\"'"
 alias hd "hexdump -e '\"%02x\"'"
 ```
