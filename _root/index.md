@@ -27,7 +27,7 @@ I've given up on most of these, as I prefer the peak of the dunning-kruger effec
     src="/assets/dunning-kruger.jpg"
     title="LittleT889, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons"
     alt="Dunning-kruger effect graph, from wikimedia commons">
-</img
+</img>
 
 -   [`rlox`](https://github.com/arlindohall/rlox) : Working through the book [Crafting Interpreters](https://craftinginterpreters.com) in Rust
 -   [Advent of code](https://github.com/arlindohall/advent.lua) in lua, one of my favorite programming languages
