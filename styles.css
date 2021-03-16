@@ -13,8 +13,12 @@
 
     --body-width: clamp(20ch, 80%, 80ch);
     --side-gutter-width: calc((100% - var(--body-width)) / 2);
+    --main-margin-top: 30px;
     --footer-height: 120px;
     --header-height: 5%;
+    --header-padding: 20px;
+    --logo-size: 80px;
+    --logo-margin: 40px;
 
     --navy-gradient: linear-gradient(
         30deg,
@@ -56,15 +60,23 @@ pre {
 
 .index-personal-logo {
     left: calc(50% - 40px);
+    margin: var(--logo-margin) 0;
     position: relative;
-    width: 80px;
+    width: var(--logo-size);
 }
 
 .main {
     border-radius: 2px;
     border: 1px solid var(--navy1);
-    min-height: 80ch;
-    margin: 30px var(--side-gutter-width) 40px var(--side-gutter-width);
+    min-height: calc( /* bottom of the main box should be... */
+        100vh /* height of the viewport from start of main box */
+        - var(--header-padding) /* minus the header size */
+        - var(--logo-size) /* minus the logo so it is on screen */
+        - var(--logo-margin) /* minus the logo margin so it shows the buffer */
+        - var(--footer-height) /* minus the footer but it is still not on-screen because of header */
+        + 20px /* not sure where this comes from, but it puts the footer just off-screen */
+    );
+    margin: var(--main-margin-top) var(--side-gutter-width) 0 var(--side-gutter-width);
     width: var(--body-width);
 }
 
@@ -76,7 +88,7 @@ pre {
     background: var(--navy-gradient);
     min-height: var(--header-height);
     /* Use padding for background gradient extension */
-    padding: 20px var(--side-gutter-width) 10px var(--side-gutter-width);
+    padding: var(--header-padding) var(--side-gutter-width);
     width: var(--body-width);
 }
 
