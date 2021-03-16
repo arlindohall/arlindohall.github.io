@@ -63,6 +63,9 @@ alias hd-rows "hexdump -e '16/1 \"%02x\" \"\n\"'"
 alias hd "hexdump -e '\"%02x\"'"
 ```
 
+[^1]: If you use bash, you can use the same alias, just replace the space
+    after `alias` with an equal sign.
+
 Okay so if you use those aliases, you can do...
 
     head -c 4 /dev/random | hd
@@ -78,6 +81,3 @@ If you want to learn more about using bash, I can't recommend Julia Evans's [Bit
 She writes in a way that's not hostile to beginners, but finds a way to pack in helpful information so that I always learn something from her comics (she inspired me to write this post).
 
 So yeah, happy randomizing!
-
-[^1]: If you use bash, you can use the same alias, just replace the space
-    after `alias` with an equal sign.
