@@ -38,6 +38,10 @@ pre, code {
     font-family: monospace;
 }
 
+pre {
+    overflow: scroll;
+}
+
 .image-center {
     left: 15%;
     position: relative;
