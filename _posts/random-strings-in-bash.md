@@ -56,14 +56,14 @@ That's not what we wanted.
 Hexdump is really cool for digging through files because by default, it prints out each byte with padding and prefixes each group of 16 bytes with a byte counter, which makes it easy to track where you are in a file.
 But we want something much simpler, just the hex-encoded string version of some binary data.
 
-I have two aliases I put in my `config.fish` [^1]:
+I have two aliases I put in my `config.fish` [^aliases]:
 
 ```fish
 alias hd-rows "hexdump -e '16/1 \"%02x\" \"\n\"'"
 alias hd "hexdump -e '\"%02x\"'"
 ```
 
-[^1]: If you use bash, you can use the same alias, just replace the space
+[^aliases]: If you use bash, you can use the same alias, just replace the space
     after `alias` with an equal sign.
 
 Okay so if you use those aliases, you can do...
