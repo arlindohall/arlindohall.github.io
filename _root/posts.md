@@ -1,5 +1,6 @@
 ---
 title: Posts - Miller Hall
+description: A list of posts I've written
 ---
 
 Posts
