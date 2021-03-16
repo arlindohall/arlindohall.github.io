@@ -39,7 +39,7 @@ pre, code {
 }
 
 pre {
-    overflow: scroll;
+    overflow: auto;
 }
 
 .image-center {
