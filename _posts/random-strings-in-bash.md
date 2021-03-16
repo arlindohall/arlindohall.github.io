@@ -15,17 +15,21 @@ For example, you might need a random hex string like a uuid (but not a uuid beca
 
 If you just need a bunch of random data, then getting it is as simple as the following:
 
-    cat /dev/random
-    # ... lots of weird characters here,
-    # and probably your shell will get messed up
+```
+cat /dev/random
+# ... lots of weird characters here,
+# and probably your shell will get messed up
+```
 
 Oh no, this runs forever!
 It turns out that `/dev/random` isn't actually a file, it's a psuedo-file that just pretends to be infinitely long.
 It actually generates the data as you read from it.
 Instead, what we want is
 
-    head -c 8 /dev/random
-    # hA���F0
+```
+head -c 8 /dev/random
+# hA���F0
+```
 
 Fortunately for us, the `head` command can process raw bytes (it doesn't care about ASCII).
 Cool, so we have a bunch of bytes.
@@ -37,19 +41,23 @@ If we could only accept lower-case letters and numbers (like if we wanted hex da
 That's a lot of waste!
 
 Encoded Data
-------------
+-----
 
 To make a 8-character base64-encoded string, you need 6 bytes of random data.
 
-    head -c 6 /dev/random | base64
-    # j2bQWTpg
+```
+head -c 6 /dev/random | base64
+# j2bQWTpg
+```
 
 Cool! What about hex?
 To make an 8-character hex-encoded string, you need 4 bytes of random data.
 
-    head -c 4 /dev/random | hexdump
-    # 0000000 f2 ca 39 00 4e 4f eb dc ef 25 92 c8 7a 5d f9 42
-    # 0000010
+```
+head -c 4 /dev/random | hexdump
+# 0000000 f2 ca 39 00 4e 4f eb dc ef 25 92 c8 7a 5d f9 42
+# 0000010
+```
 
 Uh, oh.
 That's not what we wanted.
@@ -68,11 +76,13 @@ alias hd "hexdump -e '\"%02x\"'"
 
 Okay so if you use those aliases, you can do...
 
-    head -c 4 /dev/random | hd
-    # 7933b80d
+```
+head -c 4 /dev/random | hd
+# 7933b80d
+```
 
 Conclusion
-----------
+-----
 
 It's not that hard to deal with binary data on the command line if you know just a few commands, especially if what you want is encoded binary data.
 Most of this should work on any POSIX system.
