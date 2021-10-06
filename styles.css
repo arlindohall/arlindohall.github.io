@@ -1,6 +1,9 @@
+@font-face {
+    font-family: fira-code;
+    src: url("/font/FiraCode-Regular.woff");
+}
 
 * {
-    font-family: serif;
     --navy1: #137;
     --navy2: #026;
     --navy3: #015;
@@ -28,6 +31,7 @@
 
     background-color: var(--gold2);
     color: var(--navy1);
+    font-family: fira-code, monospace;
 }
 
 body {
@@ -36,10 +40,6 @@ body {
 
 p, li, em, td {
     color: var(--grey1);
-}
-
-pre, code {
-    font-family: monospace;
 }
 
 pre {
