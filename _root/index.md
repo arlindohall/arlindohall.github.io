@@ -1,10 +1,10 @@
 ---
-title: Miller Hall
+title: About Me
 description: The home page of my personal website describes who I am,
     what I do, and some of my latest projects.
 ---
 
-Miller Hall
+About Me
 =====
 
 I am a software developer and tinkerer based in Herndon, Virginia.

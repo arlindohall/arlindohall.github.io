@@ -4,12 +4,12 @@
     --navy1: #137;
     --navy2: #026;
     --navy3: #015;
-    --cream: #fffbe3;
     --grey1: #333;
     --grey2: #333;
     --grey3: #666;
     --grey4: #bbb;
-    --gold: rgb(218, 193, 54);
+    --gold1: rgb(218, 193, 54);
+    --gold2: #f8f0cf;
 
     --body-width: clamp(20ch, 95%, 80ch);
     --side-gutter-width: calc((100% - var(--body-width)) / 2);
@@ -26,7 +26,7 @@
         var(--navy2) 20%,
         var(--navy3) 100%);
 
-    background-color: white;
+    background-color: var(--gold2);
     color: var(--navy1);
 }
 
@@ -50,12 +50,6 @@ pre {
     left: 15%;
     position: relative;
     width: 70%;
-}
-
-.header-anchor {
-    text-decoration: none;
-    color: var(--grey4);
-    font-family: monospace;
 }
 
 .index-personal-logo {
@@ -84,6 +78,15 @@ pre {
     margin: 5px 20px 60px 20px;
 }
 
+.light-text {
+    color: var(--grey3);
+}
+
+.header * {
+    background-color: rgb(0, 0, 0, 0);
+    color: var(--gold2);
+}
+
 .header {
     background: var(--navy-gradient);
     min-height: var(--header-height);
@@ -92,25 +95,7 @@ pre {
     width: var(--body-width);
 }
 
-.header-button {
-    border: 1px solid var(--navy1);
-    border-radius: 2px;
-}
-
-.header-button > * {
-    font-family: sans-serif;
-    margin: 1px 8px 2px 8px;
-}
-
-.header-button > a {
-    text-decoration: none;
-}
-
-.header-button-space {
-    margin-left: 0.8em;
-}
-
-.header-button-float-right {
+.header-float-right {
     float: right;
 }
 
@@ -125,5 +110,5 @@ pre {
 
 .footer * {
     background: rgb(0, 0, 0, 0);
-    color: white;
+    color: var(--gold2);
 }

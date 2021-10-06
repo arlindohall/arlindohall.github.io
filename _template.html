@@ -22,17 +22,22 @@
   <body>
     <div class="container">
       <div class="header">
-      <span class="header-button"><a href="/">home</a></span>
-      <span class="header-button-space"></span>
-      <span class="header-button"><a href="/posts.html">posts</a></span>
+      <span class="header-float-right"><h1>Miller Hall</h1></span>
+      <div><span class="header-button"><a href="/">home</a></span></div>
+      <div><span class="header-button"><a href="/posts.html">posts</a></span></div>
 
-      <span class="header-button header-button-float-right">
-        <a href="https://twitter.com/arlindohall">twitter</a>
-      </span>
+      <div>
+        <span class="header-button">
+          <a href="https://twitter.com/arlindohall">twitter</a>
+        </span>
+      </div>
       </div>
 
       <div id="main" class="main">
         <div class="main-buffer">
+        $if(date)$
+        <p class="light-text">$date$</p>
+        $endif$
 <!--
   Indentation is messed up here because pandoc indents code blocks
   if they are indented with the content.

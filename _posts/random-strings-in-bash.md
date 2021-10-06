@@ -3,6 +3,7 @@ title: Random Strings in Bash
 description: Examples of how to create structured random strings in bash
     especially regarding hex and base64 data, which can be made easily
     if you know what commands to use.
+date: March 12, 2021
 ---
 
 Random Strings in Bash
