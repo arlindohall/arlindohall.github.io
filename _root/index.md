@@ -1,5 +1,5 @@
 ---
-title: About Me
+title: Miller Hall
 description: The home page of my personal website describes who I am,
     what I do, and some of my latest projects.
 ---
