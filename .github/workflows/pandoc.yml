@@ -1,0 +1,22 @@
+name: Pandoc
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install pandoc
+      run: apt install -y pandoc
+    - name: Compile html
+      working-directory: './'
+      run: ./compile.sh
+    - name: Push code
+      uses: actions-x/commit@v2

@@ -17,19 +17,5 @@ function pandoc-path() {
     done
 }
 
-THIS_SCRIPT=$(realpath $0)
-ROOT=$(dirname $THIS_SCRIPT)
-
-MOVED=""
-
-if [ $ROOT != $PWD ] ; then
-    cd $ROOT
-    MOVED=true
-fi
-
 pandoc-path _posts posts/
 pandoc-path _root  ''
-
-if [ $MOVED ] ; then
-    cd -
-fi
