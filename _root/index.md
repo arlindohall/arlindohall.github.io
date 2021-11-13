@@ -31,6 +31,6 @@ I've given up on most of these, as I prefer the peak of the dunning-kruger effec
     alt="Dunning-kruger effect graph, from wikimedia commons">
 </img>
 
-- I'm working through the book [_Crafting Interpreters_](https://craftinginterpreters.com) in Rust. I build a functioning tree-walk interpreter, but it's really slow because of the incredibly simple memory management and the fact that I clone some large data types rather than deal with lifetimes. It was my first rust projec though, and I learned a lot: https://github.com/arlindohall/rlox
-- I've now started the bytecode interpreter from _Crafting Interpreters_ in Rust after following the C implementation. This one I'm a little more proud of: https://github.com/arlindohall/clox
+- I'm working through the book [_Crafting Interpreters_](https://craftinginterpreters.com) in Rust. I build a functioning tree-walk interpreter, but it's really slow because of the incredibly simple memory management and the fact that I clone some large data types rather than deal with lifetimes. It was my first rust projec though, and I learned a lot: [rlox](https://github.com/arlindohall/rlox)
+- I've now started the bytecode interpreter from _Crafting Interpreters_ in Rust after following the C implementation. This one I'm a little more proud of: [clox](https://github.com/arlindohall/clox)
 - I'm mentoring a Clemson University senior capstone team to build a sign-in console for the Clemson Makerspace. The code isn't open-sourced yet but we are planning to do so.
