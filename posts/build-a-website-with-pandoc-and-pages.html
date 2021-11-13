@@ -48,4 +48,23 @@
     </div>
   </body>
   <!-- <link rel="stylesheet" href="/debug.css"></link> -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      let headers = document.querySelectorAll("h1,h2,h3,h4");
+      for (let h of headers) {
+        let content = h.textContent;
+        let id = '#' + h.id;
+        console.log(id);
+        let a = document.createElement('a');
+
+        console.log(id, content);
+        a.setAttribute('href', id);
+        a.textContent = content;
+        console.log(a)
+
+        h.textContent = '';
+        h.appendChild(a);
+      }
+    });
+  </script>
 </html>
