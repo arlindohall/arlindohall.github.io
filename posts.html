@@ -61,13 +61,10 @@
       for (let h of headers) {
         let content = h.textContent;
         let id = '#' + h.id;
-        console.log(id);
         let a = document.createElement('a');
 
-        console.log(id, content);
         a.setAttribute('href', id);
         a.textContent = content;
-        console.log(a)
 
         h.textContent = '';
         h.appendChild(a);
