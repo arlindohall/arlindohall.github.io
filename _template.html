@@ -11,10 +11,12 @@
     $endif$
     $if(description)$
     <meta name="description" content="$description$"></meta>
-    $elseif(title)$
-    <meta name="description" content="$title$"></meta>
     $else$
-    <meta name="description" content=$outputfile$></meta>
+      $if(title)$
+      <meta name="description" content="$title$"></meta>
+      $else$
+      <meta name="description" content=$outputfile$></meta>
+      $endif$
     $endif$
     <meta name="author" content="Miller Arlindo Hall (hall@hey.com)"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>

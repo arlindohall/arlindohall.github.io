@@ -8,12 +8,12 @@ function pandoc-path() {
     src=$1 ; shift
     dest=$1 ; shift
 
-    for f in $(ls $src) ; do
-        pandoc $src/$f \
+    for f in "$src"/* ; do
+        pandoc "$f" \
                 --template _template.html \
                 --from markdown+footnotes \
                 --to html+auto_identifiers \
-                -o ${dest}$(basename $f .md).html
+                -o "${dest}""$(basename "$f" .md)".html
     done
 }
 

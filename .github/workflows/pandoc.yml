@@ -7,16 +7,20 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  CompileHtml:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Install pandoc
-      run: apt install -y pandoc
+      run: apt update && apt install -y pandoc
     - name: Compile html
-      working-directory: './'
       run: ./compile.sh
     - name: Push code
       uses: actions-x/commit@v2
+      with:
+        name: arlindohall
+        email: hall@hey.com
+        branch: main
+        files: posts index.html posts.html
