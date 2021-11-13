@@ -49,7 +49,7 @@
 # 0000000 f2 ca 39 00 4e 4f eb dc ef 25 92 c8 7a 5d f9 42
 # 0000010</code></pre>
 <p>Uh, oh. That’s not what we wanted. Hexdump is really cool for digging through files because by default, it prints out each byte with padding and prefixes each group of 16 bytes with a byte counter, which makes it easy to track where you are in a file. But we want something much simpler, just the hex-encoded string version of some binary data.</p>
-<p>I have two aliases I put in my <code>config.fish</code> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</p>
+<p>I have two aliases I put in my <code>config.fish</code> <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>:</p>
 <pre class="fish"><code>alias hd-rows &quot;hexdump -e &#39;16/1 \&quot;%02x\&quot; \&quot;\n\&quot;&#39;&quot;
 alias hd &quot;hexdump -e &#39;\&quot;%02x\&quot;&#39;&quot;</code></pre>
 <p>Okay so if you use those aliases, you can do…</p>
@@ -58,10 +58,10 @@ alias hd &quot;hexdump -e &#39;\&quot;%02x\&quot;&#39;&quot;</code></pre>
 <h2 id="conclusion">Conclusion</h2>
 <p>It’s not that hard to deal with binary data on the command line if you know just a few commands, especially if what you want is encoded binary data. Most of this should work on any POSIX system. I ran the above in <a href="https://fishshell.com/">fish shell</a> because that’s what I use on my Mac, and it’s not even POSIX-compatible. If you want to learn more about using bash, I can’t recommend Julia Evans’s <a href="https://wizardzines.com/zines/bite-size-bash/">Bite Sized Bash</a> highly enough. She writes in a way that’s not hostile to beginners, but finds a way to pack in helpful information so that I always learn something from her comics (she inspired me to write this post).</p>
 <p>So yeah, happy randomizing!</p>
-<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<section class="footnotes">
 <hr />
 <ol>
-<li id="fn1" role="doc-endnote"><p>If you use bash, you can use the same alias, just replace the space after <code>alias</code> with an equal sign.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>If you use bash, you can use the same alias, just replace the space after <code>alias</code> with an equal sign.<a href="#fnref1" class="footnote-back">↩</a></p></li>
 </ol>
 </section>
         </div>
