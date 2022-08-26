@@ -4,15 +4,13 @@
 }
 
 * {
-    --navy1: #333;
-    --navy2: #222;
-    --navy3: #111;
-    --grey1: #333;
-    --grey2: #333;
-    --grey3: #666;
-    --grey4: #bbb;
-    --gold1: #fff;
-    --gold2: #fff;
+    --primary1: #333;
+    --primary2: #222;
+    --primary3: #111;
+    --light1: #555;
+    --light2: #666;
+    --secondary2: #fff;
+    --secondary2: #eee;
 
     --body-width: clamp(20ch, 95%, 80ch);
     --side-gutter-width: calc((100% - var(--body-width)) / 2);
@@ -23,14 +21,14 @@
     --logo-size: 80px;
     --logo-margin: 40px;
 
-    --navy-gradient: linear-gradient(
+    --primary-gradient: linear-gradient(
         30deg,
-        var(--navy1) 0%,
-        var(--navy2) 20%,
-        var(--navy3) 100%);
+        var(--primary1) 0%,
+        var(--primary2) 20%,
+        var(--primary3) 100%);
 
-    background-color: var(--gold2);
-    color: var(--navy1);
+    background-color: var(--secondary2);
+    color: var(--primary1);
     font-family: fira-code, monospace;
 }
 
@@ -39,7 +37,7 @@ body {
 }
 
 p, li, em, td {
-    color: var(--grey1);
+    color: var(--light1);
 }
 
 pre {
@@ -77,13 +75,18 @@ pre {
 }
 
 .light-text {
-    color: var(--grey3);
+    color: var(--light2);
+}
+
+.header * {
+    background: rgb(0, 0, 0, 0);
+    color: var(--secondary2);
 }
 
 .header {
+    background: var(--primary-gradient);
     min-height: var(--header-height);
-    background-color: var(--gold2);
-    color: var(--navy1);
+    color: var(--primary1);
     /* Use padding for background gradient extension */
     padding: var(--header-padding) var(--side-gutter-width);
     width: var(--body-width);
@@ -94,7 +97,7 @@ pre {
 }
 
 .footer {
-    background: var(--navy-gradient);
+    background: var(--primary-gradient);
     height: var(--footer-height);
     /* Use padding for background gradient extension */
     padding-top: 20px;
@@ -104,5 +107,5 @@ pre {
 
 .footer * {
     background: rgb(0, 0, 0, 0);
-    color: var(--gold2);
+    color: var(--secondary2);
 }
