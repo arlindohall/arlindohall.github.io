@@ -4,15 +4,15 @@
 }
 
 * {
-    --navy1: #137;
-    --navy2: #026;
-    --navy3: #015;
+    --navy1: #333;
+    --navy2: #222;
+    --navy3: #111;
     --grey1: #333;
     --grey2: #333;
     --grey3: #666;
     --grey4: #bbb;
-    --gold1: rgb(218, 193, 54);
-    --gold2: #f8f0cf;
+    --gold1: #fff;
+    --gold2: #fff;
 
     --body-width: clamp(20ch, 95%, 80ch);
     --side-gutter-width: calc((100% - var(--body-width)) / 2);
@@ -60,8 +60,6 @@ pre {
 }
 
 .main {
-    border-radius: 2px;
-    border: 1px solid var(--navy1);
     min-height: calc( /* bottom of the main box should be... */
         100vh /* height of the viewport from start of main box */
         - var(--header-padding) /* minus the header size */
@@ -82,14 +80,10 @@ pre {
     color: var(--grey3);
 }
 
-.header * {
-    background-color: rgb(0, 0, 0, 0);
-    color: var(--gold2);
-}
-
 .header {
-    background: var(--navy-gradient);
     min-height: var(--header-height);
+    background-color: var(--gold2);
+    color: var(--navy1);
     /* Use padding for background gradient extension */
     padding: var(--header-padding) var(--side-gutter-width);
     width: var(--body-width);
