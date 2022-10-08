@@ -18,7 +18,7 @@ jobs:
     - name: Compile html
       run: ./compile.sh
     - name: Push code
-      uses: actions-x/commit@v2
+      uses: actions-x/commit@v6
       with:
         name: arlindohall
         email: hall@hey.com
