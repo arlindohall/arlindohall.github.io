@@ -14,5 +14,6 @@ This whole site is built with pandoc and served with github pages because why do
 Post List
 ---------
 
+- [Simple event logging single page app](/posts/event-log-single-page-app.html)
 - [Generating random data in `{fi,ba,z,}sh`](/posts/random-strings-in-bash.html)
 - [Make your own website like this one](/posts/build-a-website-with-pandoc-and-pages.html)
