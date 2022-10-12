@@ -1,0 +1,26 @@
+name: Events
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  CompileHtml:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install npm
+      run: sudo apt update && sudo apt install -y nodejs npm
+    - name: Build events directory
+      run: ./build-events.sh
+    - name: Push code
+      uses: actions-x/commit@v6
+      with:
+        name: arlindohall
+        email: hall@hey.com
+        branch: main
+        files: events
