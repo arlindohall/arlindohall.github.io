@@ -23,4 +23,4 @@ jobs:
         name: arlindohall
         email: hall@hey.com
         branch: main
-        files: events
+        files: events EVENTS_VERSION

@@ -43,12 +43,18 @@ function copy_latest_artifacts() {
   rsync -r build/ "$TARGET_DIRECTORY"
 }
 
+function copy_version_file() {
+  echo "Copying version file"
+  cp "$LATEST_COMMIT_FILE" "$EVENTS_FILE"
+}
+
 function build_events() {
   clone_events
   update_commit_hash
   if events_has_been_updated ; then
     build_latest_artifacts
     copy_latest_artifacts
+    copy_version_file
   fi
 }
 
