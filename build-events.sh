@@ -17,6 +17,7 @@ function clone_events() {
 
 function update_commit_hash() {
   echo "Updating latest commit hash"
+  cd "$EVENTS_DIRECTORY"
   git log --format="%H" | head -1 > "$LATEST_COMMIT_FILE"
 }
 
@@ -30,9 +31,15 @@ function events_has_been_updated() {
   fi
 }
 
+function install_npm() {
+  # Do this here instead of up a level so we exit early if we don't need it
+  sudo apt update && sudo apt install -y nodejs npm
+}
+
 function build_latest_artifacts() {
   echo "Building events repo"
   cd "$EVENTS_DIRECTORY"
+  install_npm
   npm install
   npm run build
 }

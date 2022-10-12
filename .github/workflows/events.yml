@@ -13,8 +13,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Install npm
-      run: sudo apt update && sudo apt install -y nodejs npm
     - name: Build events directory
       run: ./build-events.sh
     - name: Push code
