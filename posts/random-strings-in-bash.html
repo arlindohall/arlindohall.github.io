@@ -2,86 +2,124 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"></meta>
-    <link rel="stylesheet" href="/styles.css"></link>
-    <link rel="icon" type="image/svg" href="/assets/logo.svg"></link>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="/custom.css">
+    <link rel="icon" type="image/svg" href="/assets/logo.svg">
         <title>Random Strings in Bash</title>
-            <meta name="description" content="Examples of how to create structured random strings in bash especially regarding hex and base64 data, which can be made easily if you know what commands to use."></meta>
+            <meta name="description" content="Examples of how to create
+structured random strings in bash especially regarding hex and base64
+data, which can be made easily if you know what commands to
+use."></meta>
         <meta name="author" content="Miller Arlindo Hall (hall@hey.com)"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-      <span class="header-float-right"><h1>Miller Hall</h1></span>
-      <div><span class="header-button"><a href="/">home</a></span></div>
-      <div><span class="header-button"><a href="/posts.html">posts</a></span></div>
-
-      <div>
-        <span class="header-button">
-          <a href="https://twitter.com/arlindohall">twitter</a>
-        </span>
-      </div>
-      </div>
-
-      <div id="main" class="main">
-        <div class="main-buffer">
-                <p class="light-text">March 12, 2021</p>
-        <!--
+    <header>
+      <h1>Miller Hall</h1>
+      <nav>
+        <a href="/">home</a>
+        <a href="/posts.html">posts</a>
+        <a href="https://twitter.com/arlindohall">twitter</a>
+      </nav>
+    </header>
+    <main>
+            <p class="light-text">March 12, 2021</p>
+      <!--
   Indentation is messed up here because pandoc indents code blocks
   if they are indented with the content.
 -->
 <h1 id="random-strings-in-bash">Random Strings in Bash</h1>
-<p>On Linux (and MacOS) systems, there’s a really nifty feature that you can use to get random data: <code>/dev/random</code> (or, if you’re in a hurry you can use <code>/dev/urandom</code>). This special file contains random bytes, which is useful for creating one-off keys or other temporary random data. Sometimes, though, you need structured random data or encoded data. For example, you might need a random hex string like a uuid (but not a uuid because then you can just use <code>uuid</code>).</p>
-<p>If you just need a bunch of random data, then getting it is as simple as the following:</p>
+<p>On Linux (and MacOS) systems, there’s a really nifty feature that you
+can use to get random data: <code>/dev/random</code> (or, if you’re in a
+hurry you can use <code>/dev/urandom</code>). This special file contains
+random bytes, which is useful for creating one-off keys or other
+temporary random data. Sometimes, though, you need structured random
+data or encoded data. For example, you might need a random hex string
+like a uuid (but not a uuid because then you can just use
+<code>uuid</code>).</p>
+<p>If you just need a bunch of random data, then getting it is as simple
+as the following:</p>
 <pre><code>cat /dev/random
 # ... lots of weird characters here,
 # and probably your shell will get messed up</code></pre>
-<p>Oh no, this runs forever! It turns out that <code>/dev/random</code> isn’t actually a file, it’s a psuedo-file that just pretends to be infinitely long. It actually generates the data as you read from it. Instead, what we want is</p>
+<p>Oh no, this runs forever! It turns out that <code>/dev/random</code>
+isn’t actually a file, it’s a psuedo-file that just pretends to be
+infinitely long. It actually generates the data as you read from it.
+Instead, what we want is</p>
 <pre><code>head -c 8 /dev/random
 # hA���F0</code></pre>
-<p>Fortunately for us, the <code>head</code> command can process raw bytes (it doesn’t care about ASCII). Cool, so we have a bunch of bytes. But the thing is, you might need more structured data, for example a base64 string. There’s lots of reasons this might be the case, probably you just have a system that handles ASCII or UTF-8 data (like a web service), so you need to encode those bytes as printable text. We don’t want to just scan the file for printable characters, though because we’d have to skip lots of bytes. In my example output, if we accepted any ASCII characters, we would only be able to take <code>hAF0</code> from those 8 bytes, throwing the other 50% away. If we could only accept lower-case letters and numbers (like if we wanted hex data), we could only accept <code>h0</code>, which would be a loss rate of 75%. That’s a lot of waste!</p>
+<p>Fortunately for us, the <code>head</code> command can process raw
+bytes (it doesn’t care about ASCII). Cool, so we have a bunch of bytes.
+But the thing is, you might need more structured data, for example a
+base64 string. There’s lots of reasons this might be the case, probably
+you just have a system that handles ASCII or UTF-8 data (like a web
+service), so you need to encode those bytes as printable text. We don’t
+want to just scan the file for printable characters, though because we’d
+have to skip lots of bytes. In my example output, if we accepted any
+ASCII characters, we would only be able to take <code>hAF0</code> from
+those 8 bytes, throwing the other 50% away. If we could only accept
+lower-case letters and numbers (like if we wanted hex data), we could
+only accept <code>h0</code>, which would be a loss rate of 75%. That’s a
+lot of waste!</p>
 <h2 id="encoded-data">Encoded Data</h2>
-<p>To make a 8-character base64-encoded string, you need 6 bytes of random data.</p>
+<p>To make a 8-character base64-encoded string, you need 6 bytes of
+random data.</p>
 <pre><code>head -c 6 /dev/random | base64
 # j2bQWTpg</code></pre>
-<p>Cool! What about hex? To make an 8-character hex-encoded string, you need 4 bytes of random data.</p>
+<p>Cool! What about hex? To make an 8-character hex-encoded string, you
+need 4 bytes of random data.</p>
 <pre><code>head -c 4 /dev/random | hexdump
 # 0000000 f2 ca 39 00 4e 4f eb dc ef 25 92 c8 7a 5d f9 42
 # 0000010</code></pre>
-<p>Uh, oh. That’s not what we wanted. Hexdump is really cool for digging through files because by default, it prints out each byte with padding and prefixes each group of 16 bytes with a byte counter, which makes it easy to track where you are in a file. But we want something much simpler, just the hex-encoded string version of some binary data.</p>
-<p>I have two aliases I put in my <code>config.fish</code> <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>:</p>
+<p>Uh, oh. That’s not what we wanted. Hexdump is really cool for digging
+through files because by default, it prints out each byte with padding
+and prefixes each group of 16 bytes with a byte counter, which makes it
+easy to track where you are in a file. But we want something much
+simpler, just the hex-encoded string version of some binary data.</p>
+<p>I have two aliases I put in my <code>config.fish</code> <a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>:</p>
 <pre class="fish"><code>alias hd-rows &quot;hexdump -e &#39;16/1 \&quot;%02x\&quot; \&quot;\n\&quot;&#39;&quot;
 alias hd &quot;hexdump -e &#39;\&quot;%02x\&quot;&#39;&quot;</code></pre>
 <p>Okay so if you use those aliases, you can do…</p>
 <pre><code>head -c 4 /dev/random | hd
 # 7933b80d</code></pre>
 <h2 id="conclusion">Conclusion</h2>
-<p>It’s not that hard to deal with binary data on the command line if you know just a few commands, especially if what you want is encoded binary data. Most of this should work on any POSIX system. I ran the above in <a href="https://fishshell.com/">fish shell</a> because that’s what I use on my Mac, and it’s not even POSIX-compatible. If you want to learn more about using bash, I can’t recommend Julia Evans’s <a href="https://wizardzines.com/zines/bite-size-bash/">Bite Sized Bash</a> highly enough. She writes in a way that’s not hostile to beginners, but finds a way to pack in helpful information so that I always learn something from her comics (she inspired me to write this post).</p>
+<p>It’s not that hard to deal with binary data on the command line if
+you know just a few commands, especially if what you want is encoded
+binary data. Most of this should work on any POSIX system. I ran the
+above in <a href="https://fishshell.com/">fish shell</a> because that’s
+what I use on my Mac, and it’s not even POSIX-compatible. If you want to
+learn more about using bash, I can’t recommend Julia Evans’s <a
+href="https://wizardzines.com/zines/bite-size-bash/">Bite Sized Bash</a>
+highly enough. She writes in a way that’s not hostile to beginners, but
+finds a way to pack in helpful information so that I always learn
+something from her comics (she inspired me to write this post).</p>
 <p>So yeah, happy randomizing!</p>
-<section class="footnotes">
+<aside id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p>If you use bash, you can use the same alias, just replace the space after <code>alias</code> with an equal sign.<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn1"><p>If you use bash, you can use the same alias, just
+replace the space after <code>alias</code> with an equal sign.<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
-</section>
-        </div>
-      </div>
-
+</aside>
+    </main>
+    <footer>
       <img class="index-personal-logo"
           title="Personal logo"
           alt="Personal website logo, a monogram of MAH, my initials"
+          style="height: 40px;"
           src="/assets/logo.svg">
       </img>
 
-      <div class="footer">
-        <span>Page source on GitHub:
-          (<a href="https://github.com/arlindohall/arlindohall.github.io/blob/mainline/posts/random-strings-in-bash.html">html</a>,
-          <a href="https://github.com/arlindohall/arlindohall.github.io/blob/mainline/_posts/random-strings-in-bash.md">md</a>)
-        </span>
-      </div>
-    </div>
+      <p>Page source on GitHub:
+        (<a href="https://github.com/arlindohall/arlindohall.github.io/blob/mainline/posts/random-strings-in-bash.html">html</a>,
+        <a href="https://github.com/arlindohall/arlindohall.github.io/blob/mainline/_posts/random-strings-in-bash.md">md</a>)
+      </p>
+    </footer>
   </body>
-  <!-- <link rel="stylesheet" href="/debug.css"></link> -->
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       let headers = document.querySelectorAll("h1,h2,h3,h4");

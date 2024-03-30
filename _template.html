@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"></meta>
-    <link rel="stylesheet" href="/styles.css"></link>
-    <link rel="icon" type="image/svg" href="/assets/logo.svg"></link>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="/custom.css">
+    <link rel="icon" type="image/svg" href="/assets/logo.svg">
     $if(title)$
     <title>$title$</title>
     $else$
@@ -22,47 +23,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-      <span class="header-float-right"><h1>Miller Hall</h1></span>
-      <div><span class="header-button"><a href="/">home</a></span></div>
-      <div><span class="header-button"><a href="/posts.html">posts</a></span></div>
-
-      <div>
-        <span class="header-button">
-          <a href="https://twitter.com/arlindohall">twitter</a>
-        </span>
-      </div>
-      </div>
-
-      <div id="main" class="main">
-        <div class="main-buffer">
-        $if(date)$
-        <p class="light-text">$date$</p>
-        $endif$
+    <header>
+      <h1>Miller Hall</h1>
+      <nav>
+        <a href="/">home</a>
+        <a href="/posts.html">posts</a>
+        <a href="https://twitter.com/arlindohall">twitter</a>
+      </nav>
+    </header>
+    <main>
+      $if(date)$
+      <p class="light-text">$date$</p>
+      $endif$
 <!--
   Indentation is messed up here because pandoc indents code blocks
   if they are indented with the content.
 -->
 $body$
-        </div>
-      </div>
-
+    </main>
+    <footer>
       <img class="index-personal-logo"
           title="Personal logo"
           alt="Personal website logo, a monogram of MAH, my initials"
+          style="height: 40px;"
           src="/assets/logo.svg">
       </img>
 
-      <div class="footer">
-        <span>Page source on GitHub:
-          (<a href="https://github.com/arlindohall/arlindohall.github.io/blob/mainline/$outputfile$">html</a>,
-          <a href="https://github.com/arlindohall/arlindohall.github.io/blob/mainline/$sourcefile$">md</a>)
-        </span>
-      </div>
-    </div>
+      <p>Page source on GitHub:
+        (<a href="https://github.com/arlindohall/arlindohall.github.io/blob/mainline/$outputfile$">html</a>,
+        <a href="https://github.com/arlindohall/arlindohall.github.io/blob/mainline/$sourcefile$">md</a>)
+      </p>
+    </footer>
   </body>
-  <!-- <link rel="stylesheet" href="/debug.css"></link> -->
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       let headers = document.querySelectorAll("h1,h2,h3,h4");

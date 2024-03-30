@@ -2,56 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"></meta>
-    <link rel="stylesheet" href="/styles.css"></link>
-    <link rel="icon" type="image/svg" href="/assets/logo.svg"></link>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="/custom.css">
+    <link rel="icon" type="image/svg" href="/assets/logo.svg">
         <title>Event Log: a single-page app</title>
-            <meta name="description" content="A weekend project from October 2022"></meta>
+            <meta name="description" content="A weekend project from
+October 2022"></meta>
         <meta name="author" content="Miller Arlindo Hall (hall@hey.com)"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-      <span class="header-float-right"><h1>Miller Hall</h1></span>
-      <div><span class="header-button"><a href="/">home</a></span></div>
-      <div><span class="header-button"><a href="/posts.html">posts</a></span></div>
-
-      <div>
-        <span class="header-button">
-          <a href="https://twitter.com/arlindohall">twitter</a>
-        </span>
-      </div>
-      </div>
-
-      <div id="main" class="main">
-        <div class="main-buffer">
-                <p class="light-text">October 9, 2022</p>
-        <!--
+    <header>
+      <h1>Miller Hall</h1>
+      <nav>
+        <a href="/">home</a>
+        <a href="/posts.html">posts</a>
+        <a href="https://twitter.com/arlindohall">twitter</a>
+      </nav>
+    </header>
+    <main>
+            <p class="light-text">October 9, 2022</p>
+      <!--
   Indentation is messed up here because pandoc indents code blocks
   if they are indented with the content.
 -->
 <h1 id="event-log">Event Log</h1>
-<p>This is something I built in an hour yesterday because my wife wanted an app to track when the baby kicks. The whole thing runs in and all data is stored in the browser. I used <code>create-react-app</code> with a progressive web app template so the app can be downloaded to your home screen (on iOS just open in Safare and click share). You can’t share sessions between devices, but you can reload the website or close the tab and data will persist.</p>
+<p>This is something I built in an hour yesterday because my wife wanted
+an app to track when the baby kicks. The whole thing runs in and all
+data is stored in the browser. I used <code>create-react-app</code> with
+a progressive web app template so the app can be downloaded to your home
+screen (on iOS just open in Safare and click share). You can’t share
+sessions between devices, but you can reload the website or close the
+tab and data will persist.</p>
 <pre><code>npx create-react-app my-app --template cra-template-pwa-typescript</code></pre>
 <p>The app is located <a href="/events">here</a>.</p>
-        </div>
-      </div>
-
+    </main>
+    <footer>
       <img class="index-personal-logo"
           title="Personal logo"
           alt="Personal website logo, a monogram of MAH, my initials"
+          style="height: 40px;"
           src="/assets/logo.svg">
       </img>
 
-      <div class="footer">
-        <span>Page source on GitHub:
-          (<a href="https://github.com/arlindohall/arlindohall.github.io/blob/mainline/posts/event-log-single-page-app.html">html</a>,
-          <a href="https://github.com/arlindohall/arlindohall.github.io/blob/mainline/_posts/event-log-single-page-app.md">md</a>)
-        </span>
-      </div>
-    </div>
+      <p>Page source on GitHub:
+        (<a href="https://github.com/arlindohall/arlindohall.github.io/blob/mainline/posts/event-log-single-page-app.html">html</a>,
+        <a href="https://github.com/arlindohall/arlindohall.github.io/blob/mainline/_posts/event-log-single-page-app.md">md</a>)
+      </p>
+    </footer>
   </body>
-  <!-- <link rel="stylesheet" href="/debug.css"></link> -->
   <script>
     window.addEventListener('DOMContentLoaded', () => {
       let headers = document.querySelectorAll("h1,h2,h3,h4");

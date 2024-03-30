@@ -1,0 +1,25 @@
+/*
+  Used https://colorpalettes.net/color-palette-4571/ to select colors
+  Used https://color-contrast-checker.deque.com/ to make accessible
+    Final Palette:
+      Primary:        #217074
+      Secondary:      #307157
+      BG:             #e7eaef
+      Secondary BG:   #dde7d2
+      Accent:         #925900
+*/
+
+:root {
+  --bg: #fff;
+  --accent-bg: #f5f7ff;
+  --text: #212121;
+  --text-light: #585858;
+  --border: #898EA4;
+  --accent: #0d47a1;
+  --accent-hover: #1266e2;
+  --accent-text: var(--bg);
+  --code: #d81b60;
+  --preformatted: #444;
+  --marked: #ffdd33;
+  --disabled: #efefef;
+}
