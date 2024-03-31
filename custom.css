@@ -1,25 +1,46 @@
 /*
-  Used https://colorpalettes.net/color-palette-4571/ to select colors
-  Used https://color-contrast-checker.deque.com/ to make accessible
-    Final Palette:
-      Primary:        #217074
-      Secondary:      #307157
-      BG:             #e7eaef
-      Secondary BG:   #dde7d2
-      Accent:         #925900
+  Generated with: https://coolors.co/user/palettes/6608b3ca361e64000ce3e723
+    Ocean:          #1a535c
+    Ocean Glint:    #32a2b3
+    Surf:           #e1e5f2
+    Sky:            #bfdbf7
+    White Sand:     #ffdaa4
+    Sand:           #aa8f66
+    Wet Sand:       #826251
+    Cloud:          #fff
+    Charcoal:       #333
+
 */
 
 :root {
   --bg: #fff;
-  --accent-bg: #f5f7ff;
-  --text: #212121;
-  --text-light: #585858;
-  --border: #898EA4;
-  --accent: #0d47a1;
-  --accent-hover: #1266e2;
+  --accent-bg: #fdfdfd;
+  --text: #333;
+  --text-light: #aa8f66;
+  --border: #e1e5f2;
+  --accent: #1a535c;
+  --accent-hover: #32a2b3;
   --accent-text: var(--bg);
-  --code: #d81b60;
+  --code: #826251;
   --preformatted: #444;
-  --marked: #ffdd33;
-  --disabled: #efefef;
+  --marked: #ffdaa4;
+  --disabled: #bfdbf7;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  :root,
+  ::backdrop {
+    color-scheme: dark;
+    --bg: #222;
+    --accent-bg: #333;
+    --text: #e1e5f2;
+    --text-light: #bfdbf7;
+    --accent: #32a2b3;
+    --accent-hover: #ffdaa4;
+    --accent-text: var(--bg);
+    --code: #aa8f66;
+    --preformatted: #ccc;
+    --disabled: #111;
+  }
 }
