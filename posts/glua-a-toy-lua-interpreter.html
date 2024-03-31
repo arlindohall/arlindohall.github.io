@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="/custom.css">
     <link rel="icon" type="image/svg" href="/assets/logo.svg">
         <title>Glua: a toy lua interpreter</title>
-            <meta name="description" content="A dive into the design of
-and motivations behind Glua"></meta>
+            <meta name="description" content="A dive into the design of and motivations behind Glua"></meta>
         <meta name="author" content="Miller Arlindo Hall (hall@hey.com)"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
   </head>
@@ -27,22 +26,8 @@ and motivations behind Glua"></meta>
   if they are indented with the content.
 -->
 <h1 id="glua-a-toy-lua-interpreter">Glua: a toy lua interpreter</h1>
-<p>I admire Lua as a language because of its simplicity, and though I
-don’t use it for much (except a now-abandoned attempt at Advent of code
-a few years ago), I know it was the inspiration for a lot of the cool
-features of the interpreters in the book <em>Crafting Interpreters</em>,
-which I’ve worked through, and I’d like to see how I would implement
-some of those language features without peeking at Lua’s own design
-decisions.</p>
-<p>This is really just an experiment to learn more about the extent of
-my knowledge of interpreters, and to go back and compare my decisions to
-some of Lua’s to see where I can improve that knowledge. One thing I’ll
-own up to up front is that I’ll be ignoring almost all garbage
-collector–related features since I can just punt those issues to Go. I
-am excited to try to implement <a
-href="https://www.lua.org/pil/17.html">weak tables</a> in a language
-that handles its own GC without a similar feature, but I haven’t started
-planning that out yet.</p>
+<p>I admire Lua as a language because of its simplicity, and though I don’t use it for much (except a now-abandoned attempt at Advent of code a few years ago), I know it was the inspiration for a lot of the cool features of the interpreters in the book <em>Crafting Interpreters</em>, which I’ve worked through, and I’d like to see how I would implement some of those language features without peeking at Lua’s own design decisions.</p>
+<p>This is really just an experiment to learn more about the extent of my knowledge of interpreters, and to go back and compare my decisions to some of Lua’s to see where I can improve that knowledge. One thing I’ll own up to up front is that I’ll be ignoring almost all garbage collector–related features since I can just punt those issues to Go. I am excited to try to implement <a href="https://www.lua.org/pil/17.html">weak tables</a> in a language that handles its own GC without a similar feature, but I haven’t started planning that out yet.</p>
     </main>
     <footer>
       <img class="index-personal-logo"
