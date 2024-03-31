@@ -18,4 +18,5 @@ function pandoc-path() {
 }
 
 pandoc-path _posts posts/
+pandoc-path _wiki wiki/
 pandoc-path _root  ''
