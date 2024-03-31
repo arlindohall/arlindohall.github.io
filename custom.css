@@ -22,7 +22,7 @@
   --accent-hover: #32a2b3;
   --accent-text: var(--bg);
   --code: #826251;
-  --preformatted: #444;
+  --preformatted: #826251;
   --marked: #ffdaa4;
   --disabled: #bfdbf7;
 }
@@ -40,7 +40,7 @@
     --accent-hover: #ffdaa4;
     --accent-text: var(--bg);
     --code: #aa8f66;
-    --preformatted: #ccc;
+    --preformatted: #aa8f66;
     --disabled: #111;
   }
 }
