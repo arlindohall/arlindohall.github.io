@@ -18,12 +18,12 @@ function clone_events() {
 function update_commit_hash() {
   echo "Updating latest commit hash"
   cd "$EVENTS_DIRECTORY"
-  git log --format="%H" | head -1 > "$LATEST_COMMIT_FILE"
+  git log --format="%H" | head -1 >"$LATEST_COMMIT_FILE"
 }
 
 function events_has_been_updated() {
   echo "Checking for updates to events repo"
-  if diff "$EVENTS_FILE" "$LATEST_COMMIT_FILE" ; then
+  if diff "$EVENTS_FILE" "$LATEST_COMMIT_FILE"; then
     # No difference
     return 1
   else
@@ -33,6 +33,9 @@ function events_has_been_updated() {
 
 function install_npm() {
   # Do this here instead of up a level so we exit early if we don't need it
+  if which pnpm; then
+    return
+  fi
   sudo apt update && sudo apt install -y nodejs npm
 }
 
@@ -40,8 +43,8 @@ function build_latest_artifacts() {
   echo "Building events repo"
   cd "$EVENTS_DIRECTORY"
   install_npm
-  npm install
-  npm run build
+  pnpm install
+  pnpm run build
 }
 
 function copy_latest_artifacts() {
@@ -58,7 +61,7 @@ function copy_version_file() {
 function build_events() {
   clone_events
   update_commit_hash
-  if events_has_been_updated ; then
+  if events_has_been_updated; then
     build_latest_artifacts
     copy_latest_artifacts
     copy_version_file
