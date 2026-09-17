@@ -1,2 +1,6 @@
 # MacOS files
 .DS_Store
+
+# Hugo build artifacts (site/ itself is committed and deployed)
+resources/
+.hugo_build.lock

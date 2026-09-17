@@ -1,0 +1,6 @@
+baseURL = "https://arlindohall.com/"
+title = "Miller Hall"
+
+# site/ is committed and deployed directly by .github/workflows/deploy.yml;
+# hugo runs locally only (`hugo` or `hugo server`).
+publishDir = "site"
