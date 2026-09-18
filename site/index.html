@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Miller Hall</title>
   <link rel="icon" type="image/svg" href="/assets/logo.svg">
+  <link rel="stylesheet" href="/css/chroma.css">
   <style>
      
     :root {
+      color-scheme: light;
       --ctp-rosewater: #dc8a78;
       --ctp-flamingo: #dd7878;
       --ctp-pink: #ea76cb;
@@ -36,6 +38,39 @@
       --ctp-mantle: #e6e9ef;
       --ctp-crust: #dce0e8;
     }
+     
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --ctp-rosewater: #f5e0dc;
+        --ctp-flamingo: #f2cdcd;
+        --ctp-pink: #f5c2e7;
+        --ctp-mauve: #cba6f7;
+        --ctp-red: #f38ba8;
+        --ctp-maroon: #eba0ac;
+        --ctp-peach: #fab387;
+        --ctp-yellow: #f9e2af;
+        --ctp-green: #a6e3a1;
+        --ctp-teal: #94e2d5;
+        --ctp-sky: #89dceb;
+        --ctp-sapphire: #74c7ec;
+        --ctp-blue: #89b4fa;
+        --ctp-lavender: #b4befe;
+        --ctp-text: #cdd6f4;
+        --ctp-subtext1: #bac2de;
+        --ctp-subtext0: #a6adc8;
+        --ctp-overlay2: #9399b2;
+        --ctp-overlay1: #7f849c;
+        --ctp-overlay0: #6c7086;
+        --ctp-surface2: #585b70;
+        --ctp-surface1: #45475a;
+        --ctp-surface0: #313244;
+        --ctp-base: #1e1e2e;
+        --ctp-mantle: #181825;
+        --ctp-crust: #11111b;
+      }
+    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -44,10 +79,25 @@
       background: var(--ctp-base);
     }
     ::selection { background: var(--ctp-lavender); color: var(--ctp-base); }
-    nav { display: flex; gap: 1.5rem; padding: 1.25rem 1.5rem; }
+     
+    .page { max-width: 43rem; margin: 0 auto; padding: 0 1.5rem; }
+    nav { display: flex; align-items: center; gap: 1.5rem; padding: 1.25rem 0; }
+    .brand img { display: block; width: 28px; height: 28px; }
+    @media (prefers-color-scheme: dark) {
+       
+      .brand img { display: none; }
+      .brand {
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        background: var(--ctp-blue);
+        -webkit-mask: url("/assets/logo.svg") no-repeat center / contain;
+        mask: url("/assets/logo.svg") no-repeat center / contain;
+      }
+    }
     nav a { color: var(--ctp-subtext1); text-decoration: none; }
     nav a:hover { color: var(--ctp-mauve); text-decoration: underline; }
-    main { max-width: 40rem; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    main { padding: 2rem 0 4rem; }
     a { color: var(--ctp-blue); }
     a:hover { color: var(--ctp-mauve); }
     h1 {
@@ -66,6 +116,7 @@
       border-radius: 4px;
     }
     pre code { background: none; padding: 0; }
+    pre { overflow-x: auto; }
     blockquote {
       margin: 1rem 0;
       padding: 0 1rem;
@@ -75,13 +126,15 @@
   </style>
 </head>
 <body>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/projects/">Projects</a>
-    <a href="/shiny-objects/">Shiny Objects</a>
-  </nav>
-  <main>
-    
+  <div class="page">
+    <nav>
+      <a class="brand" href="/"><img src="/assets/logo.svg" alt="Miller Hall"></a>
+      <a href="/">Home</a>
+      <a href="/projects/">Projects</a>
+      <a href="/shiny-objects/">Shiny Objects</a>
+    </nav>
+    <main>
+      
 <h1>Miller Hall</h1>
 <p>Hey y&rsquo;all, I&rsquo;m a software developer from High Point, NC. I read weird sci-fi
 and listen to weird music, and if your sci-fi or music is weirder than mine,
@@ -100,6 +153,7 @@ please tell me all about it. I do things with computers mostly.</p>
 </ul>
 
 
-  </main>
+    </main>
+  </div>
 </body>
 </html>

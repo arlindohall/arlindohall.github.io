@@ -10,3 +10,5 @@ publishDir = "site"
 
 [markup.highlight]
 style = "catppuccin-latte"
+# emit .chroma classes; colors come from static/css/chroma.css (latte + dark mocha)
+noClasses = false
