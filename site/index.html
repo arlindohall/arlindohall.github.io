@@ -7,26 +7,71 @@
   <title>Miller Hall</title>
   <link rel="icon" type="image/svg" href="/assets/logo.svg">
   <style>
+     
+    :root {
+      --ctp-rosewater: #dc8a78;
+      --ctp-flamingo: #dd7878;
+      --ctp-pink: #ea76cb;
+      --ctp-mauve: #8839ef;
+      --ctp-red: #d20f39;
+      --ctp-maroon: #e64553;
+      --ctp-peach: #fe640b;
+      --ctp-yellow: #df8e1d;
+      --ctp-green: #40a02b;
+      --ctp-teal: #179299;
+      --ctp-sky: #04a5e5;
+      --ctp-sapphire: #209fb5;
+      --ctp-blue: #1e66f5;
+      --ctp-lavender: #7287fd;
+      --ctp-text: #4c4f69;
+      --ctp-subtext1: #5c5f77;
+      --ctp-subtext0: #6c6f85;
+      --ctp-overlay2: #7c7f93;
+      --ctp-overlay1: #8c8fa1;
+      --ctp-overlay0: #9ca0b0;
+      --ctp-surface2: #acb0be;
+      --ctp-surface1: #bcc0cc;
+      --ctp-surface0: #ccd0da;
+      --ctp-base: #eff1f5;
+      --ctp-mantle: #e6e9ef;
+      --ctp-crust: #dce0e8;
+    }
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
-      color: #1a1a1a;
-      background: #faf9f6;
+      color: var(--ctp-text);
+      background: var(--ctp-base);
     }
+    ::selection { background: var(--ctp-lavender); color: var(--ctp-base); }
     nav { display: flex; gap: 1.5rem; padding: 1.25rem 1.5rem; }
-    nav a { color: inherit; text-decoration: none; }
-    nav a:hover { text-decoration: underline; }
+    nav a { color: var(--ctp-subtext1); text-decoration: none; }
+    nav a:hover { color: var(--ctp-mauve); text-decoration: underline; }
     main { max-width: 40rem; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    a { color: var(--ctp-blue); }
+    a:hover { color: var(--ctp-mauve); }
     h1 {
       font-size: 2.25rem;
       margin: 0 0 1rem;
       text-decoration: underline;
       text-decoration-thickness: 2px;
+      text-decoration-color: var(--ctp-mauve);
       text-underline-offset: 0.15em;
     }
     h2, h3 { margin: 2rem 0 0.5rem; }
     li { margin: 0.35rem 0; }
+    code {
+      background: var(--ctp-surface0);
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+    }
+    pre code { background: none; padding: 0; }
+    blockquote {
+      margin: 1rem 0;
+      padding: 0 1rem;
+      border-left: 3px solid var(--ctp-surface2);
+      color: var(--ctp-subtext0);
+    }
   </style>
 </head>
 <body>
